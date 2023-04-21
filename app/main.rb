@@ -10,6 +10,9 @@ loop do
     lines << line
   end
 
+  # Add the last line
+  lines << line if line
+
   user_file = UserFile.new(lines.join)
   user_file.save!
   puts "#{user_file} saved"
