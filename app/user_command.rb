@@ -7,12 +7,10 @@ class UserCommand
     @content = content
   end
 
+  def execute
+  end
+
   def exit?
     @content == "exit\n"
   end
-end
-
-loop do
-  user_command = UserCommand.new($stdin.gets)
-  break if user_command.exit?
 end
