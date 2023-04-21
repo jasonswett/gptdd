@@ -3,9 +3,10 @@
 require_relative 'user_file'
 
 loop do
+  puts "Please paste your file and press Ctrl+D when done:"
   lines = []
 
-  while (line = $stdin.gets) != "\n"
+  while !(line = $stdin.gets).nil? && !$stdin.eof?
     lines << line
   end
 
@@ -13,4 +14,6 @@ loop do
   user_file.save!
   puts "#{user_file} saved"
   puts
-end
+
+  # Reset the input buffer
+  $stdin.gets if $stdin.eof?
