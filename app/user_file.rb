@@ -1,7 +1,17 @@
-class FileWithFilename
+# app/user_file.rb
+
+require_relative 'gptdd'
+
+class UserFile
   def initialize(content)
     @content = content
   end
+
+  def save!
+    File.write(path, @content)
+  end
+
+  private
 
   def path
     first_line = @content.lines[0]

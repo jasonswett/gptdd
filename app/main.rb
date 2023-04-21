@@ -1,6 +1,9 @@
-require_relative 'user_command'
+require_relative 'user_file'
 
-loop do
-  user_command = UserCommand.new($stdin.gets)
-  break if user_command.exit?
+lines = []
+
+while (line = $stdin.gets) != "\n"
+  lines << line
 end
+
+UserFile.new(lines.join).save!
