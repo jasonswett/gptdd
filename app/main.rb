@@ -17,3 +17,4 @@ loop do
 
   # Reset the input buffer
   $stdin.gets if $stdin.eof?
+end
