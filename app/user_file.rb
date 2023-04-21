@@ -11,6 +11,10 @@ class UserFile
     File.write(path, @content)
   end
 
+  def to_s
+    path
+  end
+
   private
 
   def path
