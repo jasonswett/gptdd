@@ -1,16 +1,16 @@
 # app/gptdd.rb
 
 class GPTDD
-  def update_file(content)
-    file_path = extract_file_path(content)
-    File.write(file_path, content)
-  end
-
   def process_input(input)
     return :exit if input.strip == 'exit'
 
     update_file(input)
     :continue
+  end
+
+  def update_file(content)
+    file_path = extract_file_path(content)
+    File.write(file_path, content)
   end
 
   private
