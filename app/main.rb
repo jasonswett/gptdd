@@ -14,6 +14,9 @@ loop do
       user_file.save!
       puts "#{user_file} saved"
       puts
+
+      system("rspec spec")
+      puts
       break
     end
 
@@ -24,4 +27,3 @@ loop do
 end
 
 puts "Exiting program."
-
