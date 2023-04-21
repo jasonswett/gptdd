@@ -5,11 +5,9 @@ require_relative '../app/user_command'
 
 describe UserCommand do
   context "file contents were given" do
-    user_command = described_class.new(%(
-# app/foo.rb
+    user_command = described_class.new(%(# app/foo.rb
 
-puts "foo"
-    ))
+puts "foo"))
 
     user_command.execute
   end

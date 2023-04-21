@@ -7,7 +7,7 @@ describe GPTDD do
   describe '#update_file' do
     it 'updates the file with the provided content' do
       # Prepare test file and content
-      test_directory = 'test'
+      test_directory = 'tmp'
       test_file_path = "#{test_directory}/temp_test_file.rb"
       initial_content = "# #{test_file_path}\ninitial content"
       updated_content = "# #{test_file_path}\nupdated content"
