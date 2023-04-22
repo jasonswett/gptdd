@@ -1,87 +1,47 @@
-# GPTDD - Test-Driven Development with ChatGPT Assistance
+# GPTDD
 
-(Note: this README was written almost entirely by ChatGPT.)
+GPTDD (GPT-driven Development) is a command-line tool that helps programmers write code using test-driven development with the assistance of ChatGPT. This README was written mostly by ChatGPT.
 
-GPTDD is a command-line tool that simplifies the process of test-driven development (TDD) by leveraging the power of ChatGPT. It streamlines the workflow for writing tests and implementing features, helping you write cleaner, more reliable code.
+## Table of Contents
 
-## Features
-
-- Interacts with ChatGPT to generate test cases and application code
-- Supports iterative test-driven development
-- Provides guidance for breaking down complex requirements into smaller substeps
-- Integrates with your existing codebase and testing framework
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 
 ## Installation
 
-Before you begin, make sure you have Ruby installed on your system. GPTDD is designed to work with Ruby projects using RSpec for testing.
-
-To install GPTDD, follow these steps:
-
-1. Clone the GPTDD repository to your local machine:
+Clone the repository from GitHub:
 
 ```
 git clone https://github.com/jasonswett/gptdd.git
 ```
 
-2. Navigate to the `gptdd` directory:
+Navigate to the project directory:
 
 ```
 cd gptdd
 ```
 
-3. Install the required Ruby gems:
-
-```
-bundle install
-```
-
-4. Add the `gptdd` executable to your system's `PATH` environment variable. You can do this by adding the following line to your shell configuration file (e.g., `.bashrc`, `.zshrc`, or `.bash_profile`):
-
-```
-export PATH="$PATH:/path/to/gptdd/bin"
-```
-
-Replace `/path/to/gptdd` with the actual path to the `gptdd` directory.
-
-5. Restart your shell or run `source` on your shell configuration file to apply the changes.
-
 ## Usage
 
-To start using GPTDD, follow this workflow:
+Before starting, make sure to paste the content of the `prompts/instructions.txt` file into ChatGPT to provide it with the necessary instructions on how to interact with GPTDD.
 
-1. Open your terminal and run `gptdd`:
+1. Run GPTDD in the command line:
 
 ```
-gptdd
+./gptdd
 ```
 
-2. GPTDD will prompt you for a requirement. Provide a clear and concise description of the feature you want to implement.
+2. Follow the TDD workflow:
 
-3. GPTDD, with the assistance of ChatGPT, will generate test code based on your requirement.
+   1. Provide a requirement to ChatGPT.
+   2. Receive test code from ChatGPT and paste it into GPTDD.
+   3. GPTDD updates the codebase and runs the relevant tests.
+   4. If the test fails, copy the failure output into ChatGPT, and receive the application code to make the test pass. Paste the code into GPTDD and repeat until the tests pass.
+   5. Provide the next requirement to ChatGPT and repeat the process.
 
-4. Copy the test code and paste it into the appropriate test file in your project.
-
-5. Run the tests and observe the output.
-
-6. If the test fails, provide the failure output to GPTDD. GPTDD will generate the application code needed to make the test pass.
-
-7. Copy the application code and paste it into the appropriate file in your project.
-
-8. Run the tests again to verify that the failure has been resolved.
-
-9. Repeat this process until your feature is fully implemented and all tests pass.
-
-## Contributing
-
-Contributions to GPTDD are welcome! Please follow these guidelines to contribute:
-
-1. Fork the repository on GitHub.
-2. Create a new branch for your changes.
-3. Commit your changes and push them to your fork.
-4. Open a pull request to merge your changes into the main repository.
-
-Please include tests for any new features or bug fixes, and make sure all tests pass before submitting your pull request.
+Remember to always start by giving ChatGPT the full instructions from `prompts/instructions.txt` so it knows how to properly assist you in the TDD process.
 
 ## License
 
-GPTDD is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
+GPTDD is released under the [MIT License](LICENSE).
