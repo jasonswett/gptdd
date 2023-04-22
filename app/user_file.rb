@@ -3,12 +3,17 @@
 require_relative 'gptdd'
 
 class UserFile
+  class FilenameMissingError < StandardError; end
+
   def initialize(content)
     @content = content
   end
 
   def save!
-    File.write(path, @content)
+    file_path = path
+    raise FilenameMissingError, "Filename is missing in the command" if file_path.nil?
+
+    File.write(file_path, @content)
   end
 
   def to_s
@@ -20,6 +25,6 @@ class UserFile
   def path
     first_line = @content.lines[0]
     match_data = first_line.match(/^#\s(.+)$/)
-    match_data[1].strip
+    match_data[1].strip unless match_data.nil?
   end
 end
