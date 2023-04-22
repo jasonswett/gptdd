@@ -1,47 +1,47 @@
 # GPTDD
 
-GPTDD (GPT-driven Development) is a command-line tool that helps programmers write code using test-driven development with the assistance of ChatGPT. This README was written mostly by ChatGPT.
+GPTDD is a command-line program that assists programmers in writing programs using test-driven development (TDD) with the help of ChatGPT. This README was mostly written by ChatGPT, an advanced AI language model developed by OpenAI.
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Contributing](#contributing)
+5. [License](#license)
+
+## Introduction
+
+GPTDD aims to facilitate the TDD process by integrating with ChatGPT. It allows developers to write tests and code based on requirements given to ChatGPT. GPTDD then updates the codebase accordingly, running the relevant tests until they pass.
 
 ## Installation
 
-Clone the repository from GitHub:
+Clone the GPTDD repository from GitHub:
 
-```
+\`\`\`bash
 git clone https://github.com/jasonswett/gptdd.git
-```
+\`\`\`
 
-Navigate to the project directory:
-
-```
-cd gptdd
-```
+After cloning the repository, follow the instructions in the setup section to configure your environment.
 
 ## Usage
 
-Before starting, make sure to paste the content of the `prompts/instructions.txt` file into ChatGPT to provide it with the necessary instructions on how to interact with GPTDD.
+Before starting to use GPTDD, paste the contents of the prompts/instructions.txt file into ChatGPT.
 
-1. Run GPTDD in the command line:
+Follow the TDD workflow outlined in the instructions:
 
-```
-./gptdd
-```
+1. Provide a requirement to ChatGPT.
+2. Receive test code from ChatGPT.
+3. Copy and paste the test code into GPTDD.
+4. GPTDD updates the codebase and runs the relevant tests.
+5. Repeat the process until the tests pass.
 
-2. Follow the TDD workflow:
+For more detailed instructions, please refer to the prompts/instructions.txt file.
 
-   1. Provide a requirement to ChatGPT.
-   2. Receive test code from ChatGPT and paste it into GPTDD.
-   3. GPTDD updates the codebase and runs the relevant tests.
-   4. If the test fails, copy the failure output into ChatGPT, and receive the application code to make the test pass. Paste the code into GPTDD and repeat until the tests pass.
-   5. Provide the next requirement to ChatGPT and repeat the process.
+## Contributing
 
-Remember to always start by giving ChatGPT the full instructions from `prompts/instructions.txt` so it knows how to properly assist you in the TDD process.
+Contributions are welcome! If you're interested in improving GPTDD or adding new features, please feel free to submit a pull request or open an issue on GitHub.
 
 ## License
 
-GPTDD is released under the [MIT License](LICENSE).
+This project is licensed under the MIT License. For more details, see the [LICENSE](LICENSE) file.
