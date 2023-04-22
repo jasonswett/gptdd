@@ -1,5 +1,7 @@
 # GPTDD - Test-Driven Development with ChatGPT Assistance
 
+(Note: this README was written entirely by ChatGPT.)
+
 GPTDD is a command-line tool that simplifies the process of test-driven development (TDD) by leveraging the power of ChatGPT. It streamlines the workflow for writing tests and implementing features, helping you write cleaner, more reliable code.
 
 ## Features
