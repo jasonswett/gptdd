@@ -5,15 +5,16 @@ require_relative 'gptdd'
 class UserFile
   class FilenameMissingError < StandardError; end
 
-  def initialize(content)
+  def initialize(content, file_handler: File)
     @content = content
+    @file_handler = file_handler
   end
 
   def save!
     file_path = path
     raise FilenameMissingError, "Filename is missing in the command" if file_path.nil?
 
-    File.write(file_path, @content)
+    @file_handler.write(file_path, @content)
   end
 
   def to_s
