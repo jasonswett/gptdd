@@ -1,6 +1,6 @@
 # GPTDD - Test-Driven Development with ChatGPT Assistance
 
-(Note: this README was written entirely by ChatGPT.)
+(Note: this README was written almost entirely by ChatGPT.)
 
 GPTDD is a command-line tool that simplifies the process of test-driven development (TDD) by leveraging the power of ChatGPT. It streamlines the workflow for writing tests and implementing features, helping you write cleaner, more reliable code.
 
@@ -20,7 +20,7 @@ To install GPTDD, follow these steps:
 1. Clone the GPTDD repository to your local machine:
 
 ```
-git clone https://github.com/yourusername/gptdd.git
+git clone https://github.com/jasonswett/gptdd.git
 ```
 
 2. Navigate to the `gptdd` directory:
