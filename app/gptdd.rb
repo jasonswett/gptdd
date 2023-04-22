@@ -1,4 +1,5 @@
 # app/gptdd.rb
+require_relative 'user_file'
 
 class GPTDD
   def process_input(input)
@@ -9,15 +10,7 @@ class GPTDD
   end
 
   def update_file(content)
-    file_path = extract_file_path(content)
-    File.write(file_path, content)
-  end
-
-  private
-
-  def extract_file_path(content)
-    first_line = content.lines[0]
-    match_data = first_line.match(/^#\s(.+)$/)
-    match_data[1].strip
+    user_file = UserFile.new(content)
+    user_file.save!
   end
 end
