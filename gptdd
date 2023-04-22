@@ -1,6 +1,6 @@
-# app/main.rb
+#!/usr/bin/env ruby
 
-require_relative 'user_file'
+require_relative 'app/user_file'
 
 loop do
   puts "Please paste your file and type 'eof' on a new line when done or 'exit' to quit:"
